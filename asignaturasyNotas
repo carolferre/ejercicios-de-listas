@@ -1,0 +1,42 @@
+# Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua) en una lista, 
+# pregunte al usuario la nota que ha sacado en cada asignatura, y después las muestre por pantalla con el mensaje En <asignatura> has sacado 
+# <nota> donde <asignatura> es cada una des las asignaturas de la lista y <nota> cada una de las correspondientes notas introducidas por el usuario.
+# Solución planteada en el libro:
+#
+#Ejemplo de salida:
+#
+# ¿Qué nota has sacado en Matemáticas? 6
+# ¿Qué nota has sacado en Física? 7
+# ¿Qué nota has sacado en Química? 4
+# ¿Qué nota has sacado en Historia? 6
+# ¿Qué nota has sacado en Lengua? 5
+# En Matemáticas has sacado 6
+# En Física has sacado 7
+# En Química has sacado 4
+# En Historia has sacado 6
+# En Lengua has sacado 5
+# subjects = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
+# scores = []
+# for subject in subjects:
+#   score = input("¿Qué nota has sacado en " + subject + "?")
+#    scores.append(score)
+# for i in range(len(subjects)):
+#   print("En " + subjects[i] + " has sacado " + scores[i])
+
+# Mi solución:
+
+
+
+def asignaturasyNotas():
+    asignaturas=["Matemáticas","Física","Química","Historia","Lengua"]
+    notas=[]
+    nota=""
+    i=1
+    for i in range(len(asignaturas)):
+        print("¿Qué notas has sacado en  ",asignaturas[i]," ?")
+        nota=(input())
+        notas.append(nota)
+        print("La nota que has sacado en ",asignaturas[i]," es = ",nota)
+    print("El total de asignaturas es= ",asignaturas)
+    print("Y el total de notas es= ",notas)
+asignaturasyNotas()
