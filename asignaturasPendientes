@@ -1,0 +1,46 @@
+
+#Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matemáticas, Física, Química, Historia y Lengua)
+# en una lista, pregunte al usuario la nota que ha sacado en cada asignatura y elimine de la lista las asignaturas aprobadas.
+# Al final el programa debe mostrar por pantalla las asignaturas que el usuario tiene que repetir.
+
+#EJEMPLO DE SALIDA:
+#¿Qué nota has sacado en Matemáticas? 7
+# ¿Qué nota has sacado en Física? 4
+# ¿Qué nota has sacado en Química? 5
+# ¿Qué nota has sacado en Historia? 6
+# ¿Qué nota has sacado en Lengua? 3
+# Tienes que repetir ['Física', 'Lengua']
+
+
+
+
+
+def aprobadasSuspensas():
+    asignaturas=[]
+    notas=[]
+    numeroasignaturas=0
+    asignatura = ""
+    nota=0
+    suspensos=[]
+    print("¿Cuántas asignaturas hay en tu fp?")
+    numeroasignaturas=int(input())
+
+    print("Escribe las asignaturas")
+    for i in range(numeroasignaturas):
+        asignatura=input()
+        asignaturas.append(asignatura)
+        print("¿Cuál es la nota que sacaste en la asignatura ",asignatura," ?")
+        nota=float(input())
+        notas.append(nota)
+        print("La nota que sacaste fue ",nota)
+        if(nota<=4):
+            print("Has suspendido")
+            suspensos.append(asignatura)
+        elif (nota>=5):
+            print("Has aprobado")
+            notas.remove(nota)
+
+    print("Las asignaturas de tu ciclo son = "+str(asignaturas))
+    print("Las asignaturas que tienes pendientes son = "+str(suspensos))
+    print("Y sus correspondientes notas son= "+str(notas))
+aprobadasSuspensas()
