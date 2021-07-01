@@ -2,6 +2,14 @@
 # Escribir un programa que pregunte al usuario los números ganadores de la lotería primitiva,
 # los almacene en una lista y los muestre por pantalla ordenados de menor a mayor.
 
+# Ejemplo de salida:
+# Introduce un número ganador:  46
+# Introduce un número ganador:  25
+# Introduce un número ganador:  32
+# Introduce un número ganador:  15
+# Introduce un número ganador:  9
+# Introduce un número ganador:  21
+# Los números ganadores son [9, 15, 21, 25, 32, 46]
 
 def loteriaGanadora ():
     contador=0
